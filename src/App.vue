@@ -3,8 +3,8 @@ import { useHead } from '@vueuse/head'
 import { onBeforeMount } from 'vue'
 
 onBeforeMount(() => {
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const setting = localStorage.getItem('color-schema') || 'auto'
+  const { matches: prefersDark } = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
+  const setting = localStorage.getItem('color-schema') ?? 'auto'
 
   if (setting === 'dark' || (prefersDark && setting !== 'light'))
     document.documentElement.classList.toggle('dark', true)
@@ -19,8 +19,5 @@ useHead({
 </script>
 
 <template>
-  <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
-    <router-view />
-    <Footer />
-  </main>
+  <router-view />
 </template>

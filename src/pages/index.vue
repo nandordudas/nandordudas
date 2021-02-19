@@ -4,3 +4,8 @@
     <p>coming soon&hellip;</p>
   </section>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: home
+</route>

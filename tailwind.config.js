@@ -1,48 +1,34 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const colors = require('tailwindcss/colors')
-const typography = require('@tailwindcss/typography')
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('windicss/defaultTheme')
+const colors = require('windicss/colors')
 
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './index.html',
-      './src/**/*.js',
-      './src/**/*.md',
-      './src/**/*.ts',
-      './src/**/*.vue',
-    ],
-    options: {
-      safelist: ['prose', 'prose-sm', 'm-auto'],
-    },
-  },
-  variants: {
-    extend: {
-      cursor: ['disabled'],
-      backgroundColor: ['disabled'],
-      borderColor: ['active', 'disabled'],
-      textColor: ['active', 'disabled'],
-      opacity: ['dark', 'active', 'disabled'],
-    },
-  },
   darkMode: 'class',
-  plugins: [typography],
+  plugins: [
+    require('windicss/plugin/typography'),
+  ],
   theme: {
     extend: {
+      screens: {
+        print: { raw: 'print' },
+      },
+      padding: {
+        '2.54cm': '2.54cm',
+        '1.8cm': '1.8cm',
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        teal: colors.teal,
       },
       typography: {
         DEFAULT: {
           css: {
+            maxWidth: '65ch',
             color: 'inherit',
             a: {
               color: 'inherit',
               opacity: 0.75,
+              fontWeight: '500',
+              textDecoration: 'underline',
               '&:hover': {
                 opacity: 1,
                 color: colors.teal[600],

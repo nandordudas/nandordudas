@@ -1,0 +1,33 @@
+{
+  "button": {
+    "back": "Vissza",
+    "home": "Kezdőlap",
+    "toggle_dark": "Téma színének válátása",
+    "toggle_langs": "Nyelv válátása"
+  },
+  "pages": {
+    "cv": {
+      "name": "Dudás Nándor",
+      "web_developer": "Web fejlesztő",
+      "work_experience": "Tapasztalat",
+      "present_day": "jelenleg",
+      "media_developer": "Média fejlesztő",
+      "planmaster_software_ltd": "PlanMaster Szoftver Kft",
+      "intern": "Gyakornok",
+      "dbi_software_ltd": "DBI Szoftver Kft.",
+      "teva_pharmaceutical_ltd": "Teva Gyógyszergyár Zrt.",
+      "raw_material_sampler": "Minőségbiztosító technikus",
+      "print": "Nyomtat",
+      "phone": "Telefon",
+      "email": "Email",
+      "bio": "Lelkes webfejlesztő és macska tulajdonos vagyok. Beleszerettem a szoftverfejlesztésbe és ez nem változik. A programozáson kívül szívesen foglalkozom fényképezéssel és kerékpározással. Az ötletek megálmodása és valóra váltása a szenvedélyem. Ez a mondat csak olvasási célokat szolgál.",
+      "skills": "Kézség",
+      "skill_list": {
+        "first": "Eredetileg Windows-felhasználó vagyok, de WSL-t, és ha lehetséges, Linuxot használok. Nem vagyok tökéletes, de próbálok jobb lenni minden probléma megoldásával.",
+        "second": "Szerintem a \"kevesebb az több\". Láthatod, ez egy rövid mese rólam, de a mesék néha valósággá válnak. Lépjünk kapcsolatba egymással, és írjuk meg közös történetünket.",
+        "third": "Ez csak egy apró darab belőlem, további információkért vedd fel a kapcsolatot velem. Tudod az elérhetőségem 👏"
+      }
+    }
+  },
+  "not-found": "Az oldal nem található"
+}

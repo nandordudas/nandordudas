@@ -9,3 +9,8 @@ const { t } = useI18n()
     <h1>{{ t('not-found') }}</h1>
   </section>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: 404
+</route>

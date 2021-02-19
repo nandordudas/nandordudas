@@ -2,7 +2,12 @@
 import { useI18n } from 'vue-i18n'
 import { isDark } from '~/logics'
 
-const { t } = useI18n()
+const { t, availableLocales, locale } = useI18n()
+const toggleLocales = () => {
+  const locales = availableLocales
+
+  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+}
 </script>
 
 <template>
@@ -10,6 +15,10 @@ const { t } = useI18n()
     <a class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="isDark = !isDark">
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />
+    </a>
+
+    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
+      <carbon-language />
     </a>
 
     <a
@@ -21,5 +30,13 @@ const { t } = useI18n()
     >
       <carbon-logo-github />
     </a>
+
+    <router-link
+      to="/cv"
+      class="icon-btn mx-2"
+      title="CV"
+    >
+      <carbon-user />
+    </router-link>
   </nav>
 </template>

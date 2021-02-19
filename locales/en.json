@@ -1,17 +1,33 @@
 {
   "button": {
-    "about": "About",
     "back": "Back",
-    "go": "GO",
     "home": "Home",
     "toggle_dark": "Toggle dark mode",
     "toggle_langs": "Change languages"
   },
-  "intro": {
-    "desc": "Opinionated Vite Starter Template",
-    "dynamic-route": "Demo of dynamic route",
-    "hi": "Hi, {name}!",
-    "whats-your-name": "What's your name?"
+  "pages": {
+    "cv": {
+      "name": "Nándor Dudás",
+      "web_developer": "Web developer",
+      "work_experience": "Work experience",
+      "present_day": "present",
+      "media_developer": "Media developer",
+      "planmaster_software_ltd": "PlanMaster SoftWare Ltd.",
+      "intern": "Intern",
+      "dbi_software_ltd": "DBI Software Ltd.",
+      "teva_pharmaceutical_ltd": "Teva Pharmaceutical Ltd.",
+      "raw_material_sampler": "QA technician",
+      "print": "Print",
+      "phone": "Phone",
+      "email": "Email",
+      "bio": "I am an enthusiast web developer and cat owner. I fell in love with software development and it does not change. Outside of programming, I enjoy doing photography and cycling. Dreaming up ideas and making them come true is where my passion lies. This sentence is for reading purposes only.",
+      "skills": "Skills",
+      "skill_list": {
+        "first": "I am Windows user originally, but using WSL and if possible I am using Linux. I am not perfect, but mate I am try to being better with every problems what is try to resolve.",
+        "second": "I think \"less is more\". As you can see, this is a short tale about myself, but the tales sometimes become a reality. Let’s get in touch with each other and write our common story.",
+        "third": "This is just a small piece about me, please contact me for more information. You know my name, phone and email address 👏"
+      }
+    }
   },
   "not-found": "Not found"
 }

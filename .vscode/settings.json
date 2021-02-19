@@ -1,5 +1,12 @@
 {
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.sortKeys": true
+  "i18n-ally.sortKeys": true,
+  "cSpell.words": [
+    "Vite",
+    "windicss"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.tsPlugin": true,
+  "volar.tsPluginStatus": false
 }

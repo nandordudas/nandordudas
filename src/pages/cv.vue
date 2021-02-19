@@ -1,0 +1,129 @@
+<script setup lang="ts">
+import { nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
+const setLocale = async(lang: string) => {
+  locale.value = lang
+
+  await nextTick()
+  print()
+}
+
+const print = () => window.print()
+</script>
+
+<template>
+  <div class="print:hidden flex">
+    <div class="h-screen grid grid-flow-col place-items-center w-full">
+      <button
+        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+        @click="setLocale('en')"
+      >
+        {{ t('pages.cv.print', '', { locale: 'en' }) }} (en)
+      </button>
+      <button
+        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+        @click="setLocale('hu')"
+      >
+        {{ t('pages.cv.print', '', { locale: 'hu' }) }} (hu)
+      </button>
+    </div>
+  </div>
+  <section class="hidden print:block print:py-2.54cm print:px-1.8cm print:divide-y print:divide-gray-100">
+    <div class="print:flex print:justify-between print:mb-4">
+      <div>
+        <h1 class="print:text-4xl">
+          {{ t('pages.cv.name') }}
+        </h1>
+        <p>{{ t('pages.cv.web_developer') }}</p>
+      </div>
+      <div class="flex flex-col justify-end text-right">
+        <a href="tel:+36-50-113-6414" :title="t('pages.cv.phone')">
+          +36-50-113-6414
+        </a>
+        <a href="mailto:nandor.dudas@gmail.com" :title="t('pages.cv.email')" target="_blank">
+          nandor.dudas@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="h-10" />
+    <div class="pt-4 mb-4">
+      <p class="indent-8">
+        {{ t('pages.cv.bio') }}
+      </p>
+    </div>
+    <div class="h-10" />
+    <div class="grid grid-cols-3 gap-4 py-4">
+      <h3 class="text-2xl w-40">
+        {{ t('pages.cv.work_experience') }}
+      </h3>
+      <div class="flex items-center">
+        2019.05 - {{ t('pages.cv.present_day') }}
+      </div>
+      <div class="flex flex-col justify-center">
+        <h3 class="text-xl">
+          {{ t('pages.cv.media_developer') }}
+        </h3>
+        <p class="italic">
+          {{ t('pages.cv.planmaster_software_ltd') }}
+        </p>
+      </div>
+      <div />
+      <div class="flex items-center">
+        2017.12 - 2019.01
+      </div>
+      <div class="flex flex-col justify-center">
+        <h3 class="text-xl">
+          {{ t('pages.cv.intern') }}
+        </h3>
+        <p class="italic">
+          {{ t('pages.cv.dbi_software_ltd') }}
+        </p>
+      </div>
+      <div />
+      <div class="flex items-center">
+        2012.03 - 2017.07
+      </div>
+      <div class="flex flex-col justify-center">
+        <h3 class="text-xl w-64 flex flex-col justify-center">
+          {{ t('pages.cv.raw_material_sampler') }}
+        </h3>
+        <p class="italic">
+          {{ t('pages.cv.teva_pharmaceutical_ltd') }}
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-7 gap-x-4 gap-y-8 pt-4">
+      <h3 class="text-2xl w-40">
+        {{ t('pages.cv.skills') }}
+      </h3>
+      <div class="col-span-4">
+        {{ t('pages.cv.skill_list.first') }}
+        <br>
+        I am Weasel!
+      </div>
+      <div class="col-span-2">
+        MySQL, Nodejs, PHP, Javascript, Typescript, Dart, Bash, Flutter, Vue, Chrome, Git, VSCode, Arch Linux, &hellip;
+      </div>
+      <div class="col-span-4">
+        {{ t('pages.cv.skill_list.second') }}
+      </div>
+      <div class="col-span-3">
+        {{ t('pages.cv.skill_list.third') }}
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.indent-8 {
+  text-indent: 2rem;
+}
+</style>
+
+<route lang="yaml">
+meta:
+  layout: cv
+</route>

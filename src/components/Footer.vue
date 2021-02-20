@@ -23,8 +23,8 @@ const toggleLocales = () => {
 
     <a
       class="icon-btn mx-2"
-      rel="noreferrer"
-      href="https://github.com/nandordudas/nandordudas"
+      rel="noreferrer noopener"
+      href="https://github.com/nandordudas"
       target="_blank"
       title="GitHub"
     >

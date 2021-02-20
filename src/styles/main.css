@@ -16,6 +16,10 @@ html.dark {
   html.dark {
     background: #fff;
   }
+
+  html, body {
+    height: 99%;
+  }
 }
 
 #nprogress {

@@ -6,6 +6,7 @@ module.exports = {
   darkMode: 'class',
   plugins: [
     require('windicss/plugin/typography'),
+    require('windicss/plugin/line-clamp'),
   ],
   theme: {
     extend: {
@@ -13,7 +14,7 @@ module.exports = {
         print: { raw: 'print' },
       },
       padding: {
-        '2.54cm': '2.54cm',
+        '2cm': '2cm',
         '1.8cm': '1.8cm',
       },
       fontFamily: {

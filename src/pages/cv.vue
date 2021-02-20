@@ -16,28 +16,36 @@ const print = () => window.print()
 
 <template>
   <div class="print:hidden flex">
-    <div class="h-screen grid grid-flow-col place-items-center w-full">
+    <div class="h-screen grid place-items-center w-full">
       <button
-        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 dark:bg-purple-300 dark:hover:bg-purple-400 dark:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
         @click="setLocale('en')"
       >
-        {{ t('pages.cv.print', '', { locale: 'en' }) }} (en)
+        <carbon-printer class="inline-block mr-4" />
+        <twemoji-flag-for-flag-united-states class="inline-block" />
       </button>
       <button
-        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+        class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 dark:bg-purple-300 dark:hover:bg-purple-400 dark:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
         @click="setLocale('hu')"
       >
-        {{ t('pages.cv.print', '', { locale: 'hu' }) }} (hu)
+        <carbon-printer class="inline-block mr-4" />
+        <twemoji-flag-for-flag-hungary class="inline-block" />
       </button>
+      <Footer />
     </div>
   </div>
-  <section class="hidden print:block print:py-2.54cm print:px-1.8cm print:divide-y print:divide-gray-100">
+  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100">
     <div class="print:flex print:justify-between print:mb-4">
       <div>
         <h1 class="print:text-4xl">
           {{ t('pages.cv.name') }}
         </h1>
-        <p>{{ t('pages.cv.web_developer') }}</p>
+        <div>
+          <carbon-logo-github class="inline-block mr-2" />
+          <a href="https://github.com/nandordudas" title="https://github.com/nandordudas" target="_blank" rel="noopener noreferrer" class="inline-block">
+            https://github.com/nandordudas
+          </a>
+        </div>
       </div>
       <div class="flex flex-col justify-end text-right">
         <a href="tel:+36-50-113-6414" :title="t('pages.cv.phone')">
@@ -96,7 +104,7 @@ const print = () => window.print()
       </div>
     </div>
     <div class="grid grid-cols-7 gap-x-4 gap-y-8 pt-4">
-      <h3 class="text-2xl w-40">
+      <h3 class="text-2xl">
         {{ t('pages.cv.skills') }}
       </h3>
       <div class="col-span-4">
@@ -105,7 +113,7 @@ const print = () => window.print()
         I am Weasel!
       </div>
       <div class="col-span-2">
-        MySQL, Nodejs, PHP, Javascript, Typescript, Dart, Bash, Flutter, Vue, Chrome, Git, VSCode, Arch Linux, &hellip;
+        MySQL, Nodejs, PHP, Typescript, Bash, Flutter, Vue, Chrome, Git, VSCode, &hellip;
       </div>
       <div class="col-span-4">
         {{ t('pages.cv.skill_list.second') }}

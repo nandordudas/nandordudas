@@ -21,6 +21,7 @@ const print = () => window.print()
         class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 dark:bg-purple-300 dark:hover:bg-purple-400 dark:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
         @click="setLocale('en')"
       >
+        {{ t('pages.cv.print') }}
         <carbon-printer class="inline-block mr-4" />
         <twemoji-flag-for-flag-united-states class="inline-block" />
       </button>
@@ -28,13 +29,14 @@ const print = () => window.print()
         class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 dark:bg-purple-300 dark:hover:bg-purple-400 dark:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
         @click="setLocale('hu')"
       >
+        {{ t('pages.cv.print') }}
         <carbon-printer class="inline-block mr-4" />
         <twemoji-flag-for-flag-hungary class="inline-block" />
       </button>
       <Footer />
     </div>
   </div>
-  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100">
+  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100" style="page-break-after: always !important">
     <div class="print:flex print:justify-between print:mb-4">
       <div>
         <h1 class="print:text-4xl">

@@ -36,7 +36,7 @@ const print = () => window.print()
       <Footer />
     </div>
   </div>
-  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100" style="page-break-after: always !important">
+  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100">
     <div class="print:flex print:justify-between print:mb-4">
       <div>
         <h1 class="print:text-4xl">

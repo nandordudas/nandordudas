@@ -23,29 +23,27 @@ export default defineConfig({
     }),
 
     Pages({
-      extensions: ['vue', 'md'],
+      extensions: ['md', 'vue'],
     }),
 
     Layouts(),
 
     Markdown({
-      wrapperClasses: 'prose prose-sm m-auto text-left',
       headEnabled: true,
       markdownItSetup(md) {
         md.use(Prism)
       },
+      wrapperClasses: 'prose prose-sm m-auto text-left',
     }),
 
     ViteComponents({
-      extensions: ['vue', 'md'],
-
       customLoaderMatcher: id => id.endsWith('.md'),
-
       customComponentResolvers: [
         ViteIconsResolver({
           componentPrefix: '',
         }),
       ],
+      extensions: ['md', 'vue'],
     }),
 
     ViteIcons(),
@@ -55,29 +53,28 @@ export default defineConfig({
     }),
 
     VitePWA({
-      inlineRegister: false,
       manifest: {
         name: 'Nandor Dudas',
-        short_name: 'Nandor Dudas',
-        theme_color: '#ffffff',
         icons: [
           {
-            src: '/pwa-192x192.png',
             sizes: '192x192',
+            src: '/pwa-192x192.png',
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
             sizes: '512x512',
+            src: '/pwa-512x512.png',
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
             purpose: 'any maskable',
+            sizes: '512x512',
+            src: '/pwa-512x512.png',
+            type: 'image/png',
           },
         ],
+        short_name: 'Nandor Dudas',
+        theme_color: '#ffffff',
       },
     }),
 
@@ -87,18 +84,18 @@ export default defineConfig({
   ],
 
   ssgOptions: {
-    script: 'async',
     formatting: 'minify',
+    script: 'async',
   },
 
   optimizeDeps: {
+    exclude: [
+      'vue-demi',
+    ],
     include: [
       'vue',
       'vue-router',
       '@vueuse/core',
-    ],
-    exclude: [
-      'vue-demi',
     ],
   },
 })

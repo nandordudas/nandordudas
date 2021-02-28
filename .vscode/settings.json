@@ -3,7 +3,12 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sortKeys": true,
   "cSpell.words": [
-    "Vite",
+    "antfu",
+    "demi",
+    "intlify",
+    "vite",
+    "vitejs",
+    "vueuse",
     "windicss"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",

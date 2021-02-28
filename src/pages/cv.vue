@@ -2,7 +2,7 @@
 import { nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()
+const { locale, t } = useI18n()
 
 const setLocale = async(lang: string) => {
   locale.value = lang
@@ -36,10 +36,10 @@ const print = () => window.print()
       <Footer />
     </div>
   </div>
-  <section class="hidden print:block print:py-2cm print:px-1.8cm print:divide-y print:divide-gray-100">
-    <div class="print:flex print:justify-between print:mb-4">
+  <section class="hidden print:block py-2cm px-1.8cm divide-y divide-gray-100">
+    <div class="flex justify-between mb-4">
       <div>
-        <h1 class="print:text-4xl">
+        <h1 class="text-4xl">
           {{ t('pages.cv.name') }}
         </h1>
         <div>

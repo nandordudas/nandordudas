@@ -1,7 +1,11 @@
 <template>
   <section>
-    <h1>Nandor Dudas</h1>
-    <p>coming soon&hellip;</p>
+    <h1 class="text-2xl">
+      Nandor Dudas
+    </h1>
+    <p class="mt-4">
+      WIP &hellip;
+    </p>
   </section>
 </template>
 

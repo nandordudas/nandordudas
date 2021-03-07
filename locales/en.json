@@ -5,29 +5,30 @@
     "toggle_dark": "Toggle dark mode",
     "toggle_langs": "Change languages"
   },
+  "not-found": "Not found",
   "pages": {
     "cv": {
-      "name": "Nándor Dudás",
-      "web_developer": "Web developer",
-      "work_experience": "Work experience",
-      "present_day": "present",
-      "media_developer": "Media developer",
-      "planmaster_software_ltd": "PlanMaster SoftWare Ltd.",
-      "intern": "Intern",
-      "dbi_software_ltd": "DBI Software Ltd.",
-      "teva_pharmaceutical_ltd": "Teva Pharmaceutical Ltd.",
-      "raw_material_sampler": "QA technician",
-      "print": "Print",
-      "phone": "Phone",
-      "email": "Email",
+      "about_me": "About me",
       "bio": "I am an enthusiast web developer and cat owner. I fell in love with software development and it does not change. Outside of programming, I enjoy doing photography and cycling. Dreaming up ideas and making them come true is where my passion lies. This sentence is for reading purposes only.",
-      "skills": "Skills",
+      "dbi_software_ltd": "DBI Software Ltd.",
+      "email": "Email",
+      "intern": "Intern",
+      "media_developer": "Media developer",
+      "name": "Nándor Dudás",
+      "phone": "Phone",
+      "planmaster_software_ltd": "PlanMaster Dental SoftWare Ltd.",
+      "present_day": "present",
+      "print": "Print",
+      "raw_material_sampler": "QA technician",
       "skill_list": {
         "first": "I am Windows user originally, but using WSL and if possible I am using Linux. I am not perfect, but mate I am try to being better with every problems what is try to resolve.",
         "second": "I think \"less is more\". As you can see, this is a short tale about myself, but the tales sometimes become a reality. Let’s get in touch with each other and write our common story.",
         "third": "This is just a small piece about me, please contact me for more information. You know my name, phone and email address 👏"
-      }
+      },
+      "skills": "Skills",
+      "teva_pharmaceutical_ltd": "Teva Pharmaceutical Ltd.",
+      "web_developer": "Web developer",
+      "work_experience": "Work experience"
     }
-  },
-  "not-found": "Not found"
+  }
 }

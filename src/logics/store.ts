@@ -1,4 +1,9 @@
-import { Ref } from 'vue'
+import type { Ref } from 'vue'
 import { useStorage } from '@vueuse/core'
+import type { AvailableLanguages } from '~/types'
 
-export const colorSchema = useStorage('color-schema', 'auto') as Ref<'auto' | 'dark' | 'light'>
+type ColorSchema = Ref<'auto' | 'dark' | 'light'>
+
+export const colorSchema = useStorage('color-schema', 'auto') as ColorSchema
+
+export const localeLanguage = useStorage('locale', 'en') as AvailableLanguages

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useTimeoutFn } from '@vueuse/core'
 import { nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { localeLanguage } from '~/logics'
@@ -16,8 +17,7 @@ const print = async(lang: string) => {
 
   if (lang === previousLanguage) return
 
-  await nextTick()
-  setLocale(previousLanguage)
+  useTimeoutFn(() => setLocale(previousLanguage), 5e2)
 }
 </script>
 

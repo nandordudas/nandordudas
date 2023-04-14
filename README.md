@@ -1,5 +1,9 @@
 ### Hi there 👋
 
+*"I am Weasel"*
+
+and I was here...
+
 <!--
 **nandordudas/nandordudas** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
